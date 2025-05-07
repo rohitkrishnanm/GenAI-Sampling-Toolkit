@@ -49,7 +49,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/yourusername/GENAI-Sampling-Toolkit.git
 cd GENAI-Sampling-Toolkit
 pip install -r requirements.txt
-'''
+'''bash
 
 python generate.py \
   --model <model_name> \
