@@ -49,7 +49,10 @@ Clone the repository and install dependencies:
 git clone https://github.com/yourusername/GENAI-Sampling-Toolkit.git
 cd GENAI-Sampling-Toolkit
 pip install -r requirements.txt
-'''bash
+
+
+## 🚀 Usage
+Basic CLI usage:
 
 python generate.py \
   --model <model_name> \
@@ -59,8 +62,6 @@ python generate.py \
   --max_new_tokens 200 \
   --hf-token <your_huggingface_token> \
   --dtype float16
-
-
 🔍 Parameters
 Argument	Description
 --model	Hugging Face model name or path
@@ -87,70 +88,3 @@ Argument	Description
 --medusa-model-heads (for medusa)
 
 --lookahead (for speculative)
-
-💡 Examples
-📌 Top-k Sampling
-bash
-Copy
-Edit
-python generate.py --model meta-llama/Llama-3.1-8B-Instruct \
-  --prompt "Tell me a story" --method top_k --top_k 50 --temperature 0.7
-📌 Nucleus Sampling (top-p)
-bash
-Copy
-Edit
-python generate.py --prompt "Write a poem" \
-  --method top_p --top_p 0.9 --temperature 0.8
-📌 Speculative Decoding
-bash
-Copy
-Edit
-python generate.py --prompt "Explain quantum physics" \
-  --method speculative --draft-model meta-llama/Llama-3.2-1B-Instruct --lookahead 4
-📌 Medusa Decoding
-bash
-Copy
-Edit
-python generate.py --prompt "Write merge sort code" \
-  --method medusa --medusa-model-heads ./medusa_heads
-📁 Project Structure
-css
-Copy
-Edit
-GENAI-Sampling-Toolkit/
-├── generate.py                  # CLI for all methods
-├── requirements.txt
-├── README.md
-├── LICENSE
-└── src/
-    ├── unconstrained.py
-    ├── top_k.py
-    ├── top_p.py
-    ├── min_p.py
-    ├── typical.py
-    ├── epsilon.py
-    ├── eta.py
-    ├── beam_search.py
-    ├── cot_decoding.py
-    ├── constrained_json_decoding.py
-    ├── speculative.py
-    ├── medusa.py
-    ├── utils.py
-🙌 Acknowledgements
-Medusa Decoding
-
-vLLM Project
-
-Jsonformer
-
-HuggingFace Transformers
-
-🛡️ License
-This project is licensed under the MIT License
-Feel free to use, distribute, and modify it with attribution.
-
-👤 Author
-Rohit Krishnan
-📍 Business & Technology Strategist
-🎓 AI, Cybersecurity & Data Science Trainer
-🔗 Website • LinkedIn • Instagram
