@@ -51,9 +51,6 @@ cd GENAI-Sampling-Toolkit
 pip install -r requirements.txt
 
 
-## 🚀 Usage
-Basic CLI usage:
-
 python generate.py \
   --model <model_name> \
   --prompt "Your input prompt here" \
@@ -62,29 +59,3 @@ python generate.py \
   --max_new_tokens 200 \
   --hf-token <your_huggingface_token> \
   --dtype float16
-🔍 Parameters
-Argument	Description
---model	Hugging Face model name or path
---prompt	Text input prompt
---prompt_file	Alternative to --prompt
---temperature	Sampling temperature (default: 1.0)
---method	Sampling method (top_k, top_p, beam_search, etc.)
---max_new_tokens	Number of new tokens to generate
---hf-token	Hugging Face token
---dtype	Precision: bfloat16, float16, float32
---seed	(Optional) Seed for reproducibility
-
-🔧 Method-Specific Arguments:
---top_k, --top_p, --min_p, --epsilon
-
---beam_width
-
---typical_p_mass
-
---json_schema (for constrained_json)
-
---draft-model (for speculative)
-
---medusa-model-heads (for medusa)
-
---lookahead (for speculative)
